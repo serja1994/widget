@@ -3,33 +3,24 @@ package com.example.widget;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.OutputStream;
-import java.net.HttpURLConnection;
-import java.net.URL;
 import java.util.ArrayList;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
-import android.content.Context;
-import android.content.DialogInterface;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Environment;
-import android.os.PowerManager;
 import android.util.Log;
 import android.view.Menu;
-import android.widget.Toast;
+import android.widget.TextView;
 
 public class MainActivity extends Activity {
 	final String DIR_SD = "MyFiles";
 	final String FILENAME_SD_1 = "fileSD1_new";
 	final String FILENAME_SD_2 = "fileSD2_new";
 	ArrayList<String> full_text;
+	ArrayList<String> full_text2;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -42,11 +33,16 @@ public class MainActivity extends Activity {
 		mProgressDialog.setIndeterminate(true);
 		mProgressDialog.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
 		mProgressDialog.setCancelable(true);
+		full_text=new ArrayList<String>();
+		full_text2=new ArrayList<String>();
 		DownloadTask downloadTask = new DownloadTask(this);
 		downloadTask.execute("http://rp5.ru/xml/6036/ru");
-
+		readFile();
+		full_text2.add(full_text.get(6));
+		peredelivaem();
+		//TextView txt2=(TextView) findViewById(R.id.textView1);
+		//txt2.setText(full_text2.get(12));
 		
-
 	}
 
 	@Override
@@ -64,17 +60,15 @@ public class MainActivity extends Activity {
 		File sdPath = Environment.getExternalStorageDirectory();
 		sdPath = new File(sdPath.getAbsolutePath() + "/" + DIR_SD);
 		File sdFile = new File(sdPath, FILENAME_SD_1);
-	
-		Log.d("myLogs","che kogo");
+		//TextView txt2=(TextView) findViewById(R.id.textView1);
+
 		try {
 			BufferedReader br = new BufferedReader(new FileReader(sdFile));
 			String str = new String();
-			full_text.clear();
+			//txt2.setText("");
 			while ((str = br.readLine()) != null) {
-				Log.d("myLogs",str);
-			
+			//	txt2.setText(txt2.getText().toString() + str + '\n');
 				full_text.add(str);
-		
 			}
 			br.close();
 		} catch (FileNotFoundException e) {
@@ -84,8 +78,56 @@ public class MainActivity extends Activity {
 		} catch (NullPointerException e) {
 			e.printStackTrace();
 		}
-	
 
+
+	}
+	void peredelivaem()
+	{
+		full_text2.add(full_text.get(6));
+		
+		full_text2.add(full_text.get(15));
+		full_text2.add(full_text.get(18));
+		full_text2.add(full_text.get(19));
+		full_text2.add(full_text.get(20));
+		full_text2.add(full_text.get(21));
+		full_text2.add(full_text.get(22));
+		full_text2.add(full_text.get(23));
+		full_text2.add(full_text.get(24));
+		full_text2.add(full_text.get(25));
+		full_text2.add(full_text.get(26));
+		
+		full_text2.add(full_text.get(30));
+		full_text2.add(full_text.get(33));
+		full_text2.add(full_text.get(34));
+		full_text2.add(full_text.get(35));
+		full_text2.add(full_text.get(36));
+		full_text2.add(full_text.get(37));
+		full_text2.add(full_text.get(38));
+		full_text2.add(full_text.get(39));
+		full_text2.add(full_text.get(40));
+		full_text2.add(full_text.get(41));
+		
+		full_text2.add(full_text.get(45));
+		full_text2.add(full_text.get(48));
+		full_text2.add(full_text.get(49));
+		full_text2.add(full_text.get(50));
+		full_text2.add(full_text.get(51));
+		full_text2.add(full_text.get(52));
+		full_text2.add(full_text.get(53));
+		full_text2.add(full_text.get(54));
+		full_text2.add(full_text.get(55));
+		full_text2.add(full_text.get(56));
+		
+		full_text2.add(full_text.get(60));
+		full_text2.add(full_text.get(63));
+		full_text2.add(full_text.get(64));
+		full_text2.add(full_text.get(65));
+		full_text2.add(full_text.get(66));
+		full_text2.add(full_text.get(67));
+		full_text2.add(full_text.get(68));
+		full_text2.add(full_text.get(69));
+		full_text2.add(full_text.get(70));
+		full_text2.add(full_text.get(71));
 	}
 
 	

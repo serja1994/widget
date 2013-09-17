@@ -4,5 +4,15 @@
     <string name="app_name">Widget</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
+    <string name="widget_text">Text in widget</string>
+    <string name="tv1">Погода</string>
+    <string name="tv2">Местное время</string>
+    <string name="tv3">Облачность</string>
+    <string name="tv4">Осадки</string>
+    <string name="tv5">Давление</string>
+    <string name="tv6">Температура</string>
+    <string name="tv7">Влажность</string>
+    <string name="tv8">Направление ветра</string>
+    <string name="tv9">Скорость ветра</string>
 
 </resources>

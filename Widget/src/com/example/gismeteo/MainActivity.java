@@ -1,4 +1,4 @@
-package com.example.widget;
+package com.example.gismeteo;
 
 import java.io.BufferedReader;
 import java.io.InputStream;
@@ -7,6 +7,8 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.concurrent.ExecutionException;
+
+import com.example.widget.R;
 
 import android.app.Activity;
 import android.app.ProgressDialog;

@@ -1,4 +1,4 @@
-package com.example.widget;
+package com.example.gismeteo;
 
 public class DataToList {
 

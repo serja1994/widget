@@ -1,6 +1,8 @@
-package com.example.widget;
+package com.example.gismeteo;
 
 import java.util.ArrayList;
+
+import com.example.widget.R;
 
 import android.app.Activity;
 import android.content.Intent;

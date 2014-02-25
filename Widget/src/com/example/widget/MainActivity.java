@@ -1,10 +1,8 @@
 package com.example.widget;
 
 import java.io.BufferedReader;
-import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.ArrayList;
@@ -18,9 +16,7 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.os.PowerManager;
 import android.view.LayoutInflater;
-import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
@@ -49,8 +45,8 @@ public class MainActivity extends Activity {
 		setContentView(R.layout.activity_main);
 		lvMain = (ListView) findViewById(R.id.listView1);
 		downloadTask = new DownloadTask(this);
-		txt = (TextView) findViewById(R.id.textView1);
-		b = (Button) findViewById(R.id.button1);
+		txt = (TextView) findViewById(R.id.activity_textView1);
+		b = (Button) findViewById(R.id.activity_button1);
 		ps = new Parser();
 		dataToList = new ArrayList<DataToList>();
 

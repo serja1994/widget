@@ -3,9 +3,7 @@
 
     <string name="app_name">Gismeteo</string>
     <string name="action_settings">Settings</string>
-    <string name="parser_noch">Ночь</string>
-    <string name="parser_den">День</string>
-    <string name="parser_vecher">Вечер</string>
-    <string name="parser_utro">Утро</string>
+    <string name="activity_button">Обновить</string>
+    <string name="activity_text">Нет данных</string>
 
 </resources>
